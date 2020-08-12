@@ -118,140 +118,144 @@ void recvDateWithEndMarker() {
 
       if (inString.length()<3){
         switch (inString.toInt()) {
+          case 0:    // 0, trial parameter stream done
+            serialOutString = "Trial Params, " + String(strt_b);
+            Serial.println(serialOutString);
+            break;
           case 1:    // 1, trial start
             serialOutString = "Trialstart, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 2:    // 2, Tap O1A1/A+1
-            serialOutString = "Tap A+1, " + String(strt_b);
+          case 2:    // 2, Clicked O1A1/A+1
+            serialOutString = "A+1 Clicked, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 3:    // 3, Tap O1P1/P+1
-            serialOutString = "Tap P+1, " + String(strt_b);
+          case 3:    // 3, Clicked O1P1/P+1
+            serialOutString = "P+1 Clicked, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 4:    // 4, Tap O1A2/A+2
-            serialOutString = "Tap A+2, " + String(strt_b);
+          case 4:    // 4, Clicked O1A2/A+2
+            serialOutString = "A+2 Clicked , " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 5:    // 5, Tap O1P2/P+2
-            serialOutString = "Tap P+2, " + String(strt_b);
+          case 5:    // 5, Clicked O1P2/P+2
+            serialOutString = "P+2 Clicked, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 6:    // 6, Tap O2A1/A-1
-            serialOutString = "Tap A-1, " + String(strt_b);
+          case 6:    // 6, Clicked O2A1/A-1
+            serialOutString = "A-1 Clicked, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 7:    // 7, Tap O2P1/P-1
-            serialOutString = "Tap P-1, " + String(strt_b);
+          case 7:    // 7, Clicked O2P1/P-1
+            serialOutString = "P-1 Clicked, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 8:    // 8, Tap O2A2/A-2
-            serialOutString = "Tap A-2, " + String(strt_b);
+          case 8:    // 8, Clicked O2A2/A-2
+            serialOutString = "A-2 Clicked, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 9:    // 9, Tap O2P2/P-2
-            serialOutString = "Tap P-2, " + String(strt_b);
+          case 9:    // 9, Clicked O2P2/P-2
+            serialOutString = "P-2 Clicked, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 10:    // 10, Tap O3A1/A+3
-            serialOutString = "Tap A+3, " + String(strt_b);
+          case 10:    // 10, Clicked O3A1/A+3
+            serialOutString = "A+3 Clicked, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 11:    // 11, Tap O3P1/P+3
-            serialOutString = "Tap P+3, " + String(strt_b);
+          case 11:    // 11, Clicked O3P1/P+3
+            serialOutString = "P+3 Clicked, " + String(strt_b);
             Serial.println(serialOutString);
             break; 
-          case 12:    // 12, Tap O3A2/A-3
-            serialOutString = "Tap A-3, " + String(strt_b);
+          case 12:    // 12, Clicked O3A2/A-3
+            serialOutString = "A-3 Clicked, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 13:    // 13, Tap O3P2/P-3
-            serialOutString = "Tap P-3, " + String(strt_b);
+          case 13:    // 13, Clicked O3P2/P-3
+            serialOutString = "P-3 Clicked, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 14:    // 14, Tap O4A1/A+4
-            serialOutString = "Tap A+4, " + String(strt_b);
+          case 14:    // 14, Clicked O4A1/A+4
+            serialOutString = "A+4 Clicked, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 15:    // 15, Tap O4P1/P+4
-            serialOutString = "Tap P+4, " + String(strt_b);
+          case 15:    // 15, Clicked O4P1/P+4
+            serialOutString = "P+4 Clicked, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 16:    // 16, Tap O4A2/A-4
-            serialOutString = "Tap A-4, " + String(strt_b);
+          case 16:    // 16, Clicked O4A2/A-4
+            serialOutString = "A-4 Clicked, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 17:    // 17, Tap O4P2/P-4
-            serialOutString = "Tap P-4, " + String(strt_b);
+          case 17:    // 17, Clicked O4P2/P-4
+            serialOutString = "P-4 Clicked, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 18:    // 18, Show O1A1/A+1
-            serialOutString = "Show A+1, " + String(strt_b);
+          case 18:    // 18, Displayed O1A1/A+1
+            serialOutString = "A+1 Displayed, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 19:    // 19, Show O1P1/P+1
-            serialOutString = "Show P+1, " + String(strt_b);
+          case 19:    // 19, Displayed O1P1/P+1
+            serialOutString = "P+1 Displayed, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 20:    // 20, Show O1A2/A+2
-            serialOutString = "Show A+2, " + String(strt_b);
+          case 20:    // 20, Displayed O1A2/A+2
+            serialOutString = "A+2 , " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 21:    // 21, Show O1P2/P+2
-            serialOutString = "Show P+2, " + String(strt_b);
+          case 21:    // 21, Displayed O1P2/P+2
+            serialOutString = "P+2 Displayed, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 22:    // 22, Show O2A1/A-1
-            serialOutString = "Show A-1, " + String(strt_b);
+          case 22:    // 22, Displayed O2A1/A-1
+            serialOutString = "A-1 Displayed, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 23:    // 23, Show O2P1/P-1
-            serialOutString = "Show P-1, " + String(strt_b);
+          case 23:    // 23, Displayed O2P1/P-1
+            serialOutString = "P-1 Displayed, " + String(strt_b);
             Serial.println(serialOutString);
             break;            
-          case 24:    // 24, Show O2A2/A-2
-            serialOutString = "Show A-2, " + String(strt_b);
+          case 24:    // 24, Displayed O2A2/A-2
+            serialOutString = "A-2 Displayed, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 25:    // 25, Show O2P2/P-2
-            serialOutString = "Show P-2, " + String(strt_b);
+          case 25:    // 25, Displayed O2P2/P-2
+            serialOutString = "P-2 Displayed, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 26:    // 26, Show O3A1/A+3
-            serialOutString = "Show A+3, " + String(strt_b);
+          case 26:    // 26, Displayed O3A1/A+3
+            serialOutString = "A+3 Displayed, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 27:    // 27, Show O3P1/P+3
-            serialOutString = "Show P+3, " + String(strt_b);
+          case 27:    // 27, Displayed O3P1/P+3
+            serialOutString = "P+3 Displayed, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 28:    // 28, Show O3A2/A-3
-            serialOutString = "Show A-3, " + String(strt_b);
+          case 28:    // 28, Displayed O3A2/A-3
+            serialOutString = "A-3 Displayed, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 29:    // 29, Show O3P2/P-3
-            serialOutString = "Show P-3, " + String(strt_b);
+          case 29:    // 29, Displayed O3P2/P-3
+            serialOutString = "P-3 Displayed, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 30:    // 30, Show O4A1/A+4
-            serialOutString = "Show A+4, " + String(strt_b);
+          case 30:    // 30, Displayed O4A1/A+4
+            serialOutString = "A+4 Displayed, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 31:    // 31, Show O4P1/P+4
-            serialOutString = "Show P+4, " + String(strt_b);
+          case 31:    // 31, Displayed O4P1/P+4
+            serialOutString = "P+4 Displayed, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 32:    // 32, Show O4A2/A-4
-            serialOutString = "Show A-4, " + String(strt_b);
+          case 32:    // 32, Displayed O4A2/A-4
+            serialOutString = "A-4 Displayed, " + String(strt_b);
             Serial.println(serialOutString);
             break;
-          case 33:    // 33, Show O4P2/P-4
-            serialOutString = "Show P-4, " + String(strt_b);
+          case 33:    // 33, Displayed O4P2/P-4
+            serialOutString = "P-4 Displayed, " + String(strt_b);
             Serial.println(serialOutString);
             break;
           case 34:    // 34, Mask On
-            serialOutString = "Mask On, " + String(strt_b);
+            serialOutString = "Covered, " + String(strt_b);
             Serial.println(serialOutString);
             break;
           case 35:    // 35, EarlyMaskOn
